@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: lightslategray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+img{
+    width: 100%;
+}
+
+p{
+    text-align: justify;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+body{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.row{
+   display: flex;
+   flex-direction: row;
+
+}
+
+.aside{
+    background-color: rgb(160, 160, 212);
+    padding: 10px;
+    flex: 30%;
+}
+
+.section{
+    background-color: rgb(150, 182, 182);
+    padding: 10px;
+    flex: 70%;
+}
+
+.video{
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    height: calc(100vw * 40 / 100);
+    /* max-width: 400px; */
+}
+
+.tarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 30px; 
+    justify-content: space-between;
+}
+    
+
+.tarjetas .card{
+    background-color: lightskyblue;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    overflow: auto;
+    box-shadow: 5px 5px 8px  #000;
+    padding: 10px;
+    aspect-ratio: 700/800;
+}
+.tarjetas .card:hover{
+    background-color: rgba(128, 128, 128, 0.4);
+    transform: scale(1.1);
+}
+
+.tarjetas .card img{
+    display: block;
+    width: 30%;
+    margin: auto;
+}
+
+.tarjetas .contenido p:first-child{
+    color: rgb(69, 69, 220);
+    border-bottom: 2px dashed rgb(95, 63, 63);
+    text-align: center;
+}
+
+
+@media screen and (max-width: 900px) {
+    .row{
+        flex-direction: column-reverse;
+    }
+}
